@@ -12,15 +12,15 @@ spring:
         predicates:
         - Path= /baidu/**
       - id: user
-        uri: http://localhost:8060/
+        uri: lb://CLOUD-USER
         predicates:
-        - Path= /user/**
+        - Path= /CLOUD-USER/**
       - id: config
-        uri: http://localhost:8000/
+        uri: lb://CLOUD-CONFIG
         predicates:
-        - Path= /config/**
+        - Path= /CLOUD-CONFIG/**
       - id: box
-        uri: http://localhost:8070/
+        uri: lb://CLOUD-BOX
         predicates:
-        - Path= /box/**
+        - Path= /CLOUD-BOX/**
 
